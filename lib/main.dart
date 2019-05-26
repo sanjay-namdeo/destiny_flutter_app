@@ -29,8 +29,47 @@ class _DestiniPageState extends State<DestiniPage> {
         ),
       ),
       constraints: BoxConstraints.expand(),
-      child: Column(
-        children: <Widget>[],
+      child: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Expanded(
+              flex: 4,
+              child: Center(
+                child: Text(
+                  'Hello World',
+                  style: TextStyle(color: Colors.white, fontSize: 30.0),
+                ),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                margin: EdgeInsets.fromLTRB(20.0, 25.0, 20.0, 10.0),
+                color: Colors.green,
+                child: FlatButton(
+                  onPressed: null,
+                  child: Text(
+                    'True',
+                    style: TextStyle(color: Colors.white, fontSize: 20.0),
+                  ),
+                ),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                margin: EdgeInsets.fromLTRB(20.0, 5.0, 20.0, 30.0),
+                color: Colors.red,
+                child: FlatButton(
+                  onPressed: null,
+                  child: Text(
+                    'False',
+                    style: TextStyle(color: Colors.white, fontSize: 20.0),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
